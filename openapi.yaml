@@ -1,0 +1,81 @@
+openapi: 3.0.4
+info:
+  title: Pictionary Generator
+  description: Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/pictionary:
+    get:
+      summary: Generate Drawing Prompts
+      description: Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.
+      operationId: pictionary
+      parameters:
+      - name: difficulty
+        default: medium
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Difficulty level: easy, medium, hard'
+        example: medium
+      - name: count
+        default: '1'
+        in: query
+        schema:
+          type: number
+        required: false
+        description: Number of words to generate (1-50)
+        example: '5'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  words:
+                  - Certainly
+                  - Political
+                  - Number
+                  - Feature
+                  - Fireplace
+                  count: 5
+                  difficulty: medium
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
