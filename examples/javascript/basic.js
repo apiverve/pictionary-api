@@ -13,13 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/pictionary';
  */
 async function callPictionaryGeneratorAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            difficulty: &#x27;medium&#x27;,
-            count: 5
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
