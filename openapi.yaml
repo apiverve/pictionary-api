@@ -1,41 +1,41 @@
 openapi: 3.0.4
 info:
   title: Pictionary Generator
-  description: Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.
+  description: >-
+    Pictionary Generator creates random drawing prompts filtered by difficulty
+    level for the classic Pictionary sketching game.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/pictionary:
     get:
       summary: Generate Drawing Prompts
-      description: Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.
+      description: Generate pictionary words by difficulty level
       operationId: pictionary
       parameters:
-      - name: difficulty
-        default: medium
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Difficulty level: easy, medium, hard'
-        example: medium
-      - name: count
-        default: '1'
-        in: query
-        schema:
-          type: number
-        required: false
-        description: Number of words to generate (1-50)
-        example: '5'
+        - name: difficulty
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Difficulty level
+          example: medium
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Number of words to generate
+          example: 5
       responses:
         '200':
           description: Successful Response
@@ -51,18 +51,18 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   words:
-                  - Certainly
-                  - Political
-                  - Number
-                  - Feature
-                  - Fireplace
+                    - Including
+                    - Widely
+                    - Nation
+                    - Buffalo
+                    - Twelve
                   count: 5
                   difficulty: medium
         '401':
@@ -70,7 +70,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -78,4 +78,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
