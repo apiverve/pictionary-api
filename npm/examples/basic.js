@@ -16,7 +16,7 @@ const api = new pictionaryAPI({
 // Example query
 var query = {
   difficulty: "medium",
-  count: 5
+  count: 1
 };
 
 // Make the API request using callback
