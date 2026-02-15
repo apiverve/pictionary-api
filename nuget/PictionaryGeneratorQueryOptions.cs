@@ -11,15 +11,13 @@ namespace APIVerve.API.PictionaryGenerator
     public class PictionaryGeneratorQueryOptions
     {
         /// <summary>
-        /// Difficulty level: easy, medium, hard
-        /// Example: medium
+        /// Difficulty level
         /// </summary>
         [JsonProperty("difficulty")]
         public string Difficulty { get; set; }
 
         /// <summary>
-        /// Number of words to generate (1-50)
-        /// Example: 5
+        /// Number of words to generate
         /// </summary>
         [JsonProperty("count")]
         public string Count { get; set; }
