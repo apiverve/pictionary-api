@@ -1,1 +1,3 @@
-from .apiClient import PictionaryAPIClient
+from .apiClient import PictionaryAPIClient, PictionaryAPIClientError
+
+__all__ = ['PictionaryAPIClient', 'PictionaryAPIClientError']
