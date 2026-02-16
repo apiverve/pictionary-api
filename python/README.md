@@ -44,7 +44,10 @@ from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient
 # Initialize the client with your APIVerve API key
 api = PictionaryAPIClient("[YOUR_API_KEY]")
 
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 ```
 
 ###### Simple Request
@@ -128,7 +134,10 @@ from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient, Pictiona
 
 api = PictionaryAPIClient("[YOUR_API_KEY]")
 
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -149,7 +158,10 @@ from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient, Pictiona
 
 api = PictionaryAPIClient("[YOUR_API_KEY]")
 
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 
 try:
     result = api.execute(query)
@@ -183,7 +195,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient, PictionaryAPIClientError
 
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 
 # Using context manager ensures proper cleanup
 with PictionaryAPIClient("[YOUR_API_KEY]") as api:
@@ -209,7 +224,10 @@ from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient
 # Enable debug mode
 api = PictionaryAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "difficulty": "medium", "count": 1 }
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -224,8 +242,12 @@ from apiverve_pictionarygenerator.apiClient import PictionaryAPIClient
 
 api = PictionaryAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "difficulty": "medium",
+    "count": 1
+}
+
 try:
-    query = { "difficulty": "medium", "count": 1 }
     result = api.execute(query)
     print(result)
 finally:
