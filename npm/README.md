@@ -126,11 +126,11 @@ async function makeRequest() {
   "error": null,
   "data": {
     "words": [
-      "Certainly",
-      "Political",
-      "Number",
-      "Feature",
-      "Fireplace"
+      "Including",
+      "Widely",
+      "Nation",
+      "Buffalo",
+      "Twelve"
     ],
     "count": 5,
     "difficulty": "medium"
