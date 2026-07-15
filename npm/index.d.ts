@@ -4,18 +4,30 @@ declare module '@apiverve/pictionary' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface pictionaryResponse {
     status: string;
     error: string | null;
     data: PictionaryGeneratorData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface PictionaryGeneratorData {
-      words:      string[];
-      count:      number;
-      difficulty: string;
+      words:      (null | string)[];
+      count:      number | null;
+      difficulty: null | string;
   }
 
   export default class pictionaryWrapper {
