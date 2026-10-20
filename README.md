@@ -1,13 +1,13 @@
-# [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.
 
 The Pictionary Generator API provides a simple, reliable way to integrate pictionary generator functionality into your applications. Built for developers who need production-ready pictionary generator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/pictionary-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/pictionary](https://docs.apiverve.com/ref/pictionary)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,36 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Pictionary Generator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "words": [
+      "Including",
+      "Widely",
+      "Nation",
+      "Buffalo",
+      "Twelve"
+    ],
+    "count": 5,
+    "difficulty": "medium"
+  }
 }
 ```
 
@@ -203,7 +228,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Pictionary Generator API](https://apiverve.com/marketplace/pictionary?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

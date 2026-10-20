@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/pictionary:
     get:
-      summary: Generate Drawing Prompts
+      summary: Pictionary Generator
       description: Generate pictionary words by difficulty level
       operationId: pictionary
       parameters:
