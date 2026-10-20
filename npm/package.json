@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/pictionary",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/pictionary-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/pictionary?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/pictionary?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
