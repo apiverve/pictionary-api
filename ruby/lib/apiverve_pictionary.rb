@@ -4,6 +4,6 @@ require_relative "apiverve_pictionary/client"
 
 module APIVerve
   module Pictionary
-    VERSION = "1.2.3"
+    VERSION = "1.2.4"
   end
 end
