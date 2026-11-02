@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/pictionary",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Pictionary Generator creates random drawing prompts filtered by difficulty level for the classic Pictionary sketching game.",
   "main": "index.js",
   "types": "index.d.ts",
